@@ -2,18 +2,29 @@
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
     import Logo from './icons/Logo.svelte';
-    //let prevScrollpos = window.pageYOffset;
-	let visible = true;
-    let sideVisible = true;
-    let link1 = true;
-    let link2 = true;
-    let link3 = true;
-    let link4 = true;
-    let button = true;
+    let prevScrollpos = window.pageYOffset;
+	let visible = false;
+    let sideVisible = false;
+    let link1 = false;
+    let link2 = false;
+    let link3 = false;
+    let link4 = false;
+    let button = false;
     let i = 0; 
     onMount(() => {
         setTimeout(flyDown, 4000)
         setTimeout(dropLinks, 4500)
+        window.onscroll = () => {
+            var currentScrollPos = window.pageYOffset;
+            if (currentScrollPos < prevScrollpos) {
+                visible = true;
+                sideVisible = false
+            } else {
+                visible = false;
+                sideVisible = false
+            }
+            prevScrollpos = currentScrollPos;
+        }
     });
 
     function flyDown (){
