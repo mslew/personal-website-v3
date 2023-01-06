@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Project.astro
 title: 'Health Insurance Risk Calculator' 
 tech: 
     - Bootstrap

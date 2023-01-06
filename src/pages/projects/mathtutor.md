@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Project.astro
 title: 'Math Tutor' 
 tech: 
     - HTML

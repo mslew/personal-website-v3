@@ -1,0 +1,25 @@
+---
+import Project from "./Project.svelte";
+const { frontMatter } = Astro.props
+const { title } = Astro.props;
+const { techs } = Astro.props;
+const { githubIcon } = Astro.props;
+const { externalIcon } = Astro.props; 
+const { github } = Astro.props;
+const { link } = Astro.props;
+---
+
+<p>{frontMatter.title}</p>
+<p>{frontMatter.techs}</p>
+<p>{frontMatter.githubIcon}</p>
+<p>{frontMatter.externalIcon}</p>
+<p>{frontMatter.github}</p>
+<p>{frontMatter.link}</p>
+<slot />
+
+
+<!-- 
+<Project title={title} techs={techs} githubIcon={githubIcon} externalIcon={externalIcon} github={github} link={link}>
+    <slot />
+</Project>
+-->

@@ -1,0 +1,12 @@
+---
+import Project from "../layouts/Project.astro";
+import cdiff from '../pages/projects/cdiff.md'
+const projects = await Astro.glob('../pages/projects/*.md');
+---
+
+{projects.slice(0, 3).map((item => {
+    <article>
+        <h1>{item.frontmatter.title}</h1>
+        <slot />
+    </article>
+}))}

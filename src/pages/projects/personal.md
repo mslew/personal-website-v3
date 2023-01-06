@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Project.astro
 title: 'Personal Website' 
 tech: 
     - Svelte

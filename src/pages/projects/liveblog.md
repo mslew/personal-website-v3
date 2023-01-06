@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Project.astro
 title: 'Live Blog' 
 tech: 
     - Bootstrap

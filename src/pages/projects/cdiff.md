@@ -1,6 +1,6 @@
 ---
-layout: project
-title: 'An Agent-Based Model of Envionmental Transmission of Clostridioides difficile in Healthcare Settings' 
+layout: ../../layouts/Project.astro
+title: 'An Agent-Based Model of Environmental Transmission of Clostridioides difficile in Healthcare Settings' 
 tech: 
     - NetLogo 
 githubIcon: false

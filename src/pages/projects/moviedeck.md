@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/Project.astro
 title: 'Movie Deck' 
 tech: 
     - Vue.js

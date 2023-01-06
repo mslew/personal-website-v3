@@ -5,6 +5,7 @@ import Intro from '../components/sections/Intro.svelte';
 import About from '../components/sections/About.svelte';
 import Projects from '../components/sections/Projects.svelte';
 import Contact from '../components/sections/Contact.svelte';
+import ProjectsDisplay from '../components/ProjectsDisplay.astro';
 ---
 
 <!DOCTYPE html>
@@ -13,11 +14,13 @@ import Contact from '../components/sections/Contact.svelte';
 		<BaseHead />
 	</head>
 	<body>
-		<Nav />
-		<Intro />
-		<About />
-		<Projects />
-		<Contact />
+		<Nav client:only="svelte"/>
+		<Intro client:only="svelte"/>
+		<About client:only="svelte"/>
+		<ProjectsDisplay />
+		<Projects client:only="svelte">
+		</Projects>
+		<Contact client:only="svelte"/>
 	</body>
 </html>
 
@@ -28,4 +31,4 @@ import Contact from '../components/sections/Contact.svelte';
 	  background-color: $background;
 	  font-family: $font-regular;
 	}
-  </style>
+</style>
